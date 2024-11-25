@@ -16,6 +16,4 @@ RUN apt-get update && \
     groupadd -g 82 deployment && \
     useradd -m -u 82 -g 82 -s /bin/bash deployment && \
     # Добавление пользователя в группу docker
-    usermod -aG docker deployment && \
-    # Установка пароля для пользователя deployment
-    echo "deployment:your_secure_password" | chpasswd
+    usermod -aG docker deployment
