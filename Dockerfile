@@ -14,6 +14,6 @@ RUN apt-get update && \
     chmod +x /usr/local/bin/docker-compose && \
     # Создание пользователя и группы с id 82
     groupadd -g 82 deployment && \
-    useradd -m -u 82 -g 82 -s /bin/bash deployment \
+    useradd -m -u 82 -g 82 -s /bin/bash deployment && \
     # Добавление пользователя в группу docker
     usermod -aG docker deployment
